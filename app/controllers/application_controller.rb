@@ -4,11 +4,10 @@ class ApplicationController < ActionController::Base
   def after_sign_up_path_for(resource)
     if current_user
       flash[:sing_up] = "Welcome! You have signed up successfully."
-      user_path(current_user)
     else
       flash[:sign_in] = "Signed in successfully." 
-      user_path(current_user)
     end
+    user_path(current_user)
   end
   
   
