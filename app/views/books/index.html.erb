@@ -1,5 +1,4 @@
-<%= render 'user', user: @users %>
-<%= render 'book', user: @books %>
+<%= render partial: 'users/user', locals:{ user: @user, book: @book } %>
 
 <% @books.each do |book| %>
   <div>
