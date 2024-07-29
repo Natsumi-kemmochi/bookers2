@@ -27,7 +27,7 @@
               
             <% if user_signed_in? %>
             
-            <li class="nav-item text-light">
+            <li class="nav-item text-light"> 
               <%= link_to user_path(current_user.id), class:"nav-link text-light" do %>
               <i class="fa-solid fa-house" style="color: #ffffff;"></i> Home
             </li>
@@ -83,10 +83,8 @@
   </main>
     
   <footer>
-      <div class="row py-5">
-        <div class="col-3">
-        </div>
-        <div class="col-6 d-flex flex-column align-items-center">
+      <div class="row">
+        <div class="mx-auto">
           <p>CopyRight Infratop.inc</p>
         </div>
       </div>
