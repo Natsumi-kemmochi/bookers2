@@ -1,3 +1,5 @@
+   
+   
    <div class="col-md-3">
      <h2 class="text-left">User info</h2>
      
@@ -19,25 +21,15 @@
        </table>
      
      
-     <div class="edit">
-         <% if user == current_user %>
-         <%= link_to edit_user_path, class: "btn btn-light btn-outline-dark btn-block" do %>
+     <div class="edit_user">
+         <%= link_to edit_user_path(current_user), class: "btn btn-light btn-outline-dark btn-block" do %>
          <i class="fa-solid fa-user-gear"></i>
          </i>
-       <% end %>
-
-       <% end %>
+        <% end %>
      </div>
   
        <h2 class="mt-3 text-left">New book</h1>
-          <% if book.errors.any? %>
-            <%= book.errors.count %>error prohibited this obj from being saved:
-            <ul>
-            <% book.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-            <% end %>
-            </ul>
-          <% end %>
+         
         
         <div class="form text-left">
           <%= form_with model: book, url: '/books', method: :post do |f| %>
