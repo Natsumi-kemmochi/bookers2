@@ -1,7 +1,7 @@
 <div class="container px-5 px-sm-0">
   <div class="row">
 
-  <%= render partial: 'users/user', locals:{ user: @book.user, book: @book } %>
+  <%= render partial: 'users/user', locals:{ user: @book.user, book: @book_new } %>
 
   <div class="col-md-8 offset-md-1 text-left">
 
@@ -23,10 +23,10 @@
             </td>
              <% if @book.user == current_user %>
                <td>
-                 <%= link_to "edit", edit_book_path(@book.id), class: 'btn btn-success' %>
+                 <%= link_to "Edit", edit_book_path(@book.id), class: 'btn btn-success' %>
                </td>
                <td>
-                 <%= link_to "delete", book_path(@book), method: :delete, class: 'btn btn-danger', "data-confirm" => "本当に消しますか？" %>
+                 <%= link_to "Destroy", book_path(@book), method: :delete, class: 'btn btn-danger', "data-confirm" => "本当に消しますか？" %>
                </td>
              <% end %>
           </tr>
